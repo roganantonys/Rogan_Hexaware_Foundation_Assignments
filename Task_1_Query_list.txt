@@ -1,0 +1,29 @@
+Task 1 Query:
+
+3. Write a SQL query to increase the balance of a specific account by a certain amount.
+    update accounts set balance = balance + 1000 Where account_id = 111;
+
+4. Write a SQL query to Combine first and last names of customers as a full_name.
+  SELECT concat(first_name,' ',last_name) as name from customers;
+
+5. Write a SQL query to remove accounts with a balance of zero where the account type is savings
+  DELETE FROM accounts WHERE account_type='savings' and balance=0;
+
+6. Write a SQL query to Find customers living in a specific city.
+    SELECT concat(first_name,' ',last_name) FROM customers LIKE address='%chennai%';
+
+7. Write a SQL query to Get the account balance for a specific account
+select balance from accounts where account_id=112;
+
+8. Write a SQL query to List all current accounts with a balance greater than $1,000.
+  Select * from accounts where account_type='current' and balance >= 15000;
+
+9. Write a SQL query to Retrieve all transactions for a specific account
+ select transaction_type as Trasnsactions,amount  from transactions where account_id=111;
+
+11. Write a SQL query to Identify accounts where the balance is less than a specified overdraft limit.
+ select account_id from accounts where balance < 10000;
+
+12. Write a SQL query to Find customers not living in a specific city.
+   SELECT concat(first_name,' ',last_name) FROM customers where address not like '%chennai%';
+
